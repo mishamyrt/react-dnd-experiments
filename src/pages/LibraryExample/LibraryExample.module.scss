@@ -1,0 +1,8 @@
+.example {
+  width: 100%;
+  padding: var(--space-2xl);
+  height: 100vh;
+  display: grid;
+  grid-template-rows: var(--space-8xl) 1fr;
+  max-width: var(--breakpoint-l);
+}
