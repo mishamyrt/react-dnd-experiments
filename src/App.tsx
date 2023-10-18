@@ -15,10 +15,10 @@ const router = createBrowserRouter(
     },
     ...libraries
       .filter((lib) => Boolean(lib.Example))
-      .map(({ name, Example }) => ({
+      .map(({ name, directory, Example }) => ({
         path: `/lib/${name}`,
         element: (
-          <LibraryExample title={name}>
+          <LibraryExample title={name} directory={directory ?? name}>
             {Example ? <Example /> : null}
           </LibraryExample>
         ),
