@@ -1,20 +1,21 @@
 import type { FC } from 'react'
 
 import { Stack } from '@ozen-ui/kit/Stack'
-import { Link } from '@ozen-ui/kit/Link'
 import { Card } from '@ozen-ui/kit/Card'
 
 import { libraries } from '../../libraries'
 
 import styles from './LibrariesList.module.scss'
+import { Link } from 'react-router-dom'
+import { Typography } from '@ozen-ui/kit/Typography'
 
 export const LibrariesList: FC = () => {
   return (
     <Card className={styles.card}>
       <Stack direction="column" gap="l">
         {libraries.map(({ name }) => (
-          <Link variant="heading-2xl" key={name} href={`${import.meta.env.BASE_URL}/lib/${name}`}>
-            {name}
+          <Link className={styles.link} key={name} to={`/lib/${name}`}>
+            <Typography color='action' variant="heading-2xl">{name}</Typography>
           </Link>
         ))}
       </Stack>

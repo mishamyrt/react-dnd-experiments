@@ -20,6 +20,7 @@ export const ReactBeautifulDNDExample: FC = () => {
       ) {
         return
       }
+      // Тут же можно проверять доступность перехода по жизненному циклу
       const item = boardDataMap.get(draggableId)
       if (!item) {
         return
