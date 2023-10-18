@@ -13,7 +13,7 @@ export const LibrariesList: FC = () => {
     <Card className={styles.card}>
       <Stack direction="column" gap="l">
         {libraries.map(({ name }) => (
-          <Link variant="heading-2xl" key={name} href={`/lib/${name}`}>
+          <Link variant="heading-2xl" key={name} href={`${import.meta.env.BASE_URL}/lib/${name}`}>
             {name}
           </Link>
         ))}
