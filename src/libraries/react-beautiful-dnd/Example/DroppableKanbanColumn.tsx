@@ -1,7 +1,7 @@
 import { KanbanColumn, KanbanColumnItems } from '$components'
 import { type FC } from 'react'
 import { Droppable } from 'react-beautiful-dnd'
-import { type KanbanColumnData } from '../../mock/types'
+import { type KanbanColumnData } from '../../../mock/types'
 import { DraggableKanbanCard } from './DraggableKanbanCard'
 
 export const DroppableKanbanColumn: FC<KanbanColumnData> = ({ title, items }) => {

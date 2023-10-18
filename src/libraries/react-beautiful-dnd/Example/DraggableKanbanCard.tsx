@@ -6,7 +6,7 @@ import {
   type NotDraggingStyle,
 } from 'react-beautiful-dnd'
 import { KanbanCard } from '$components'
-import { type KanbanCardData } from '../../mock/types'
+import { type KanbanCardData } from '../../../mock/types'
 
 export interface DraggableKanbanCardProps {
   data: KanbanCardData

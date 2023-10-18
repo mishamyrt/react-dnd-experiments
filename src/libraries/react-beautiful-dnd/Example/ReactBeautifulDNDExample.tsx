@@ -4,7 +4,7 @@ import { DragDropContext, type OnDragEndResponder } from 'react-beautiful-dnd'
 import { boardData, boardDataMap } from '$mock'
 import { DroppableKanbanColumn } from './DroppableKanbanColumn'
 import { useBoolean } from '@ozen-ui/kit/useBoolean'
-import { type KanbanCardData } from '../../mock/types'
+import { type KanbanCardData } from '../../../mock/types'
 
 export const ReactBeautifulDNDExample: FC = () => {
   const [open, { off, on }] = useBoolean(false)
