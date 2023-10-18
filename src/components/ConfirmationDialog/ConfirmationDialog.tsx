@@ -32,9 +32,9 @@ export const ConfirmationDialog: FC<ConfirmationDialogProps> = ({
         Вы действительно хотите сменить статус <b>{data.name}</b> на <b>{target}</b>?
       </DialogBody>
       <DialogFooter>
-        <Stack gap="m">
-          <Button onClick={onClose}>Понятно</Button>
-          <Button onClick={onClose}>Понятно</Button>
+        <Stack gap="s">
+          <Button variant="ghost" color='error' onClick={onClose}>Отменить</Button>
+          <Button onClick={onClose}>Сменить статус</Button>
         </Stack>
       </DialogFooter>
     </Dialog>
