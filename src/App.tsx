@@ -1,4 +1,4 @@
-import type { FC } from 'react'
+import { type FC } from 'react'
 import { ThemeProvider, themeOzenDark } from '@ozen-ui/kit/ThemeProvider'
 import styles from './App.module.scss'
 
@@ -20,7 +20,9 @@ const router = createBrowserRouter([
       </LibraryExample>
     ),
   })),
-])
+], {
+  basename: import.meta.env.PROD ? '/react-dnd-experiments' : '/',
+})
 
 export const App: FC = () => {
   return (
