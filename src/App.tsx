@@ -21,7 +21,7 @@ const router = createBrowserRouter([
     ),
   })),
 ], {
-  basename: import.meta.env.PROD ? '/react-dnd-experiments' : '/',
+  basename: '/react-dnd-experiments',
 })
 
 export const App: FC = () => {
