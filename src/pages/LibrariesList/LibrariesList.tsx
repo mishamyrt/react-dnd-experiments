@@ -13,11 +13,21 @@ export const LibrariesList: FC = () => {
   return (
     <Card className={styles.card}>
       <Stack direction="column" gap="l">
-        {libraries.map(({ name }) => (
-          <Link className={styles.link} key={name} to={`/lib/${name}`}>
-            <Typography color='action' variant="heading-2xl">{name}</Typography>
-          </Link>
-        ))}
+        {libraries.map(({ name, Example }) =>
+          Example
+            ? (
+            <Link className={styles.link} key={name} to={`/lib/${name}`}>
+              <Typography color="action" variant="heading-2xl">
+                {name}
+              </Typography>
+            </Link>
+              )
+            : (
+            <Typography key={name} color="secondary" variant="heading-2xl">
+              {name}
+            </Typography>
+              ),
+        )}
       </Stack>
     </Card>
   )

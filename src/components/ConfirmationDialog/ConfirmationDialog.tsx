@@ -33,7 +33,9 @@ export const ConfirmationDialog: FC<ConfirmationDialogProps> = ({
       </DialogBody>
       <DialogFooter>
         <Stack gap="s">
-          <Button variant="ghost" color='error' onClick={onClose}>Отменить</Button>
+          <Button variant="ghost" color="error" onClick={onClose}>
+            Отменить
+          </Button>
           <Button onClick={onClose}>Сменить статус</Button>
         </Stack>
       </DialogFooter>

@@ -7,22 +7,27 @@ import { LibrariesList } from './pages/LibrariesList'
 import { libraries } from './libraries'
 import { LibraryExample } from './pages/LibraryExample'
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <LibrariesList />,
+    },
+    ...libraries
+      .filter((lib) => Boolean(lib.Example))
+      .map(({ name, Example }) => ({
+        path: `/lib/${name}`,
+        element: (
+          <LibraryExample title={name}>
+            {Example ? <Example /> : null}
+          </LibraryExample>
+        ),
+      })),
+  ],
   {
-    path: '/',
-    element: <LibrariesList />,
+    basename: import.meta.env.BASE_URL,
   },
-  ...libraries.map(({ name, Example }) => ({
-    path: `/lib/${name}`,
-    element: (
-      <LibraryExample title={name}>
-        <Example />
-      </LibraryExample>
-    ),
-  })),
-], {
-  basename: import.meta.env.BASE_URL,
-})
+)
 
 export const App: FC = () => {
   return (
