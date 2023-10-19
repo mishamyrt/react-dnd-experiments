@@ -9,12 +9,18 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react'],
+  plugins: ['react', 'simple-import-sort'],
   rules: {
     'comma-dangle': 'off',
     'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/strict-boolean-expressions': 'off',
     '@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
     '@typescript-eslint/triple-slash-reference': 'off',
+    'simple-import-sort/imports': [
+      'error',
+      {
+        groups: [['react$'], ['@ozen'], ['^@?\\w'], ['^'], ['^\\.'], ['\\.scss']],
+      },
+    ],
   },
 }
