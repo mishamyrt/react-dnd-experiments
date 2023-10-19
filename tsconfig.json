@@ -25,6 +25,6 @@
       "$mock": ["./src/mock"]
     }
   },
-  "include": ["src", ".*.cjs", "*.ts"],
+  "include": ["src", ".*.cjs", "*.ts", "scripts/.*.cjs", "scripts/*.mjs"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
