@@ -1,5 +1,5 @@
 import { type LibraryExample } from '../types'
-import { DNDKitExample } from './Example/DNDKitExample'
+import { DNDKitExample } from './Example/DND-Kit-Example'
 
 export const DNDKit: LibraryExample = {
   name: '@dnd-kit/core',
