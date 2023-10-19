@@ -13,12 +13,12 @@ import { useIsDragging } from './hooks'
 
 interface DroppableKanbanColumnProps {
   data: KanbanColumnData
-  onSelect: (data: KanbanCardData, target: KanbanCardStatus) => void
+  onDrop: (data: KanbanCardData, target: KanbanCardStatus) => void
 }
 
 export const DroppableKanbanColumn: FC<DroppableKanbanColumnProps> = ({
   data,
-  onSelect,
+  onDrop,
 }) => {
   const { title, items } = data
   const [{ isOver, canDrop }, dropRef] = useDrop<
@@ -31,7 +31,7 @@ export const DroppableKanbanColumn: FC<DroppableKanbanColumnProps> = ({
   >({
     accept: CardType,
     drop: (item) => {
-      onSelect(item, title)
+      onDrop(item, title)
       return item
     },
     collect: (monitor) => ({
