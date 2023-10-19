@@ -10,7 +10,7 @@ export type LibraryExampleProps = PropsWithChildren<{
 }>
 
 const formatExampleUrl = (dir: string): string => {
-  return `https://github.com/mishamyrt/react-dnd-experiments/tree/main/src/libraries/${dir}/Example`
+  return `${import.meta.env.VITE_REPO_URL}/tree/main/src/libraries/${dir}/Example`
 }
 
 const formatBundlephobiaUrl = (packageName: string): string => {
