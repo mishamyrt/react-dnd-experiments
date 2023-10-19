@@ -17,6 +17,9 @@
     "*.{ts,tsx}": [
       "prettier --write",
       "eslint --fix"
+    ],
+    "*.{scss,md}": [
+      "prettier --write"
     ]
   },
   "dependencies": {
