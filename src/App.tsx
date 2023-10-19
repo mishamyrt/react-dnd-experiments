@@ -5,7 +5,7 @@ import styles from './App.module.scss'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { LibrariesList } from './pages/LibrariesList'
 import { libraries } from './libraries'
-import { LibraryExample } from './pages/LibraryExample'
+import { LibraryPlayground } from './pages/LibraryPlayground'
 
 const router = createBrowserRouter(
   [
@@ -17,11 +17,7 @@ const router = createBrowserRouter(
       .filter((lib) => Boolean(lib.Example))
       .map(({ name, directory, Example }) => ({
         path: `/lib/${name}`,
-        element: (
-          <LibraryExample title={name} directory={directory ?? name}>
-            {Example ? <Example /> : null}
-          </LibraryExample>
-        ),
+        element: <LibraryPlayground name={name} directory={directory} example={Example} />,
       })),
   ],
   {

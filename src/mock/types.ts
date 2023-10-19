@@ -8,7 +8,7 @@ export type KanbanCardData = {
 } & KanbanCardProps
 
 export interface KanbanColumnData {
-  title: string
+  title: KanbanCardStatus
   items: KanbanCardData[]
 }
 
