@@ -10,6 +10,7 @@ import {
   boardData,
   boardDataMap,
   type KanbanCardStatus,
+  canDrop,
 } from '$mock'
 import { DroppableKanbanColumn } from './DroppableKanbanColumn'
 import { type ExampleProps } from '../../types'
@@ -30,7 +31,10 @@ export const ReactBeautifulDNDExample: FC<ExampleProps> = ({ onChange }) => {
       if (!item) {
         return
       }
-      onChange(item, destination.droppableId as KanbanCardStatus)
+      const target = destination.droppableId as KanbanCardStatus
+      if (canDrop(item, target)) {
+        onChange(item, target)
+      }
     },
     [],
   )
