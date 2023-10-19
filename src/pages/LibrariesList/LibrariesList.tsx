@@ -38,7 +38,9 @@ export const LibrariesList: FC = () => {
         </Stack>
       </Card>
       <Stack fullWidth className={styles.footer}>
-        <Link className={styles.repoLink} href={repoLink}>GitHub</Link>
+        <Link className={styles.repoLink} href={repoLink}>
+          GitHub
+        </Link>
       </Stack>
     </Stack>
   )

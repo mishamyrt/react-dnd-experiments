@@ -19,8 +19,10 @@ When a card is grabbed, the statuses to which it can be dragged should be highli
 
 ## Libraries
 
+<!-- prettier-ignore-start -->
 | Library | Size (minified + gzipped) |
 |---|---|
 | [react-beautiful-dnd](https://bundlephobia.com/package/react-beautiful-dnd@13.1.1) | 30.2 kB |
 | [react-dnd](https://bundlephobia.com/package/react-dnd@16.0.1) with [react-dnd-html5-backend](https://bundlephobia.com/package/react-dnd-html5-backend@16.0.1) | 9.1 + 4.5 kB |
 | [@dnd-kit/core](https://bundlephobia.com/package/@dnd-kit/core@6.0.8) | 13.9 kB |
+<!-- prettier-ignore-end -->
