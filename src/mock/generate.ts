@@ -9,7 +9,7 @@ export class CardDataGenerator {
   public map = new Map<string, KanbanCardData>()
 
   public get (status: KanbanCardStatus): KanbanCardData {
-    const name = randomName()
+    const name = `${randomName()} ${randomName()}`
     const phone = randomPhone()
     const key = `${name}-${phone}`
     if (this.map.has(key)) {
