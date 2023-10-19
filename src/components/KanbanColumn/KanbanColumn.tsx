@@ -11,7 +11,12 @@ export type KanbanColumnProps = PropsWithChildren<{
   active?: boolean
 }>
 
-export const KanbanColumn: FC<KanbanColumnProps> = ({ title, children, active, ready }) => {
+export const KanbanColumn: FC<KanbanColumnProps> = ({
+  title,
+  children,
+  active,
+  ready,
+}) => {
   return (
     <div
       className={clsx(styles.column, {

@@ -1,12 +1,3 @@
 .card {
   max-width: 500px;
 }
-
-.link {
-  color: var(--color-content-action);
-  transition: var(--transition-default);
-
-  &:hover {
-    opacity: 0.8;
-  }
-}

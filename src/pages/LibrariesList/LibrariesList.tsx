@@ -6,7 +6,8 @@ import { Card } from '@ozen-ui/kit/Card'
 import { libraries } from '../../libraries'
 
 import styles from './LibrariesList.module.scss'
-import { Link } from 'react-router-dom'
+import { Link as RouterLink } from 'react-router-dom'
+import { Link } from '@ozen-ui/kit/Link'
 import { Typography } from '@ozen-ui/kit/Typography'
 
 export const LibrariesList: FC = () => {
@@ -16,10 +17,13 @@ export const LibrariesList: FC = () => {
         {libraries.map(({ name, Example }) =>
           Example
             ? (
-            <Link className={styles.link} key={name} to={`/lib/${name}`}>
-              <Typography color="action" variant="heading-2xl">
-                {name}
-              </Typography>
+            <Link
+              variant="heading-2xl"
+              as={RouterLink}
+              key={name}
+              to={`/lib/${name}`}
+            >
+              {name}
             </Link>
               )
             : (

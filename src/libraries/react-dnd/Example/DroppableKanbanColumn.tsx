@@ -58,7 +58,12 @@ export const DroppableKanbanColumn: FC<DroppableKanbanColumnProps> = ({
   const isDragging = useIsDragging()
 
   return (
-    <KanbanColumn ready={isDragging && canDrop} active={canDrop && isOver} key={title} title={title}>
+    <KanbanColumn
+      ready={isDragging && canDrop}
+      active={canDrop && isOver}
+      key={title}
+      title={title}
+    >
       <KanbanColumnItems containerRef={dropRef}>
         {items.map((data, index) => (
           <DraggableKanbanCard index={index} data={data} key={data.key} />
