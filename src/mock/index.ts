@@ -9,20 +9,20 @@ const randomLength = (): number => randomInt(30, 5)
 
 export const boardData: KanbanBoardData = [
   {
-    title: 'Новый',
-    items: generator.getArray(randomLength(), 'Новый'),
+    title: 'New',
+    items: generator.getArray(randomLength(), 'New'),
   },
   {
-    title: 'Потенциальный',
-    items: generator.getArray(randomLength(), 'Потенциальный'),
+    title: 'Potential',
+    items: generator.getArray(randomLength(), 'Potential'),
   },
   {
-    title: 'Действующий',
-    items: generator.getArray(randomLength(), 'Действующий'),
+    title: 'Active',
+    items: generator.getArray(randomLength(), 'Active'),
   },
   {
-    title: 'Расторгнут',
-    items: generator.getArray(randomLength(), 'Расторгнут'),
+    title: 'Canceled',
+    items: generator.getArray(randomLength(), 'Canceled'),
   },
 ]
 

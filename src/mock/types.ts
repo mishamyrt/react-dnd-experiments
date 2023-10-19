@@ -1,6 +1,6 @@
 import type { KanbanCardProps } from '$components'
 
-export type KanbanCardStatus = 'Новый' | 'Потенциальный' | 'Действующий' | 'Расторгнут'
+export type KanbanCardStatus = 'New' | 'Potential' | 'Active' | 'Canceled'
 
 export type KanbanCardData = {
   key: string

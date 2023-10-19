@@ -25,7 +25,7 @@ export const LibraryExample: FC<LibraryExampleProps> = ({ children, title, direc
           {title}
         </Typography>
         <Link variant='text-s' href={formatBundlephobiaUrl(title)} target='_blank'>Bundlephobia</Link>
-        <Link variant='text-s' href={formatExampleUrl(directory)} target='_blank'>Код примера</Link>
+        <Link variant='text-s' href={formatExampleUrl(directory)} target='_blank'>Example code</Link>
       </Stack>
       <div className={styles.content}>{children}</div>
     </div>

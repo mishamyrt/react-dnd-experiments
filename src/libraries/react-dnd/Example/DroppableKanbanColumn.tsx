@@ -30,7 +30,7 @@ export const DroppableKanbanColumn: FC<DroppableKanbanColumnProps> = ({ data, on
         return false
       }
       // Запрещаем переходы по ЖЦ
-      if (item.status === 'Расторгнут') {
+      if (item.status === 'Canceled') {
         return false
       }
       return true
