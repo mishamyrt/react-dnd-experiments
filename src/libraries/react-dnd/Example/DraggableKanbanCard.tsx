@@ -15,6 +15,9 @@ export const DraggableKanbanCard: FC<DraggableKanbanCardProps> = ({ data }) => {
     () => ({
       type: CardType,
       item: data,
+      options: {
+        dropEffect: 'move',
+      },
     }),
     [],
   )

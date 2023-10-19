@@ -13,8 +13,12 @@
   border-radius: var(--border-radius-s);
   transition: var(--transition-slow);
   box-shadow: 0 0 0 0 transparent inset;
-}
 
-.column.active {
-  box-shadow: 0 0 0 3px var(--color-background-action) inset;
+  &.ready {
+    box-shadow: 0 0 0 3px var(--color-border-secondary) inset;
+
+    &.active {
+      box-shadow: 0 0 0 3px var(--color-border-action) inset;
+    }
+  }
 }

@@ -7,14 +7,16 @@ import clsx from 'clsx'
 
 export type KanbanColumnProps = PropsWithChildren<{
   title: string
+  ready?: boolean
   active?: boolean
 }>
 
-export const KanbanColumn: FC<KanbanColumnProps> = ({ title, children, active }) => {
+export const KanbanColumn: FC<KanbanColumnProps> = ({ title, children, active, ready }) => {
   return (
     <div
       className={clsx(styles.column, {
         [styles.active]: active,
+        [styles.ready]: ready,
       })}
     >
       <div className={styles.header}>

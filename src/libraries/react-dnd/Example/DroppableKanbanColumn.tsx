@@ -8,6 +8,7 @@ import {
 import { useDrop } from 'react-dnd'
 import { DraggableKanbanCard } from './DraggableKanbanCard'
 import { CardType } from './constants'
+import { useIsDragging } from './hooks'
 
 interface DroppableKanbanColumnProps {
   data: KanbanColumnData
@@ -40,16 +41,24 @@ export const DroppableKanbanColumn: FC<DroppableKanbanColumnProps> = ({
       if (item.status === title) {
         return false
       }
-      // Запрещаем переходы по ЖЦ
-      if (item.status === 'Canceled') {
-        return false
+      switch (title) {
+        case 'New':
+          return item.status === 'Potential'
+        case 'Potential':
+          return ['New', 'Canceled'].includes(item.status)
+        case 'Active':
+          return ['Potential', 'New'].includes(item.status)
+        case 'Canceled':
+          return item.status === 'Active'
+        default:
+          return false
       }
-      return true
     },
   })
+  const isDragging = useIsDragging()
 
   return (
-    <KanbanColumn active={canDrop && isOver} key={title} title={title}>
+    <KanbanColumn ready={isDragging && canDrop} active={canDrop && isOver} key={title} title={title}>
       <KanbanColumnItems containerRef={dropRef}>
         {items.map((data, index) => (
           <DraggableKanbanCard index={index} data={data} key={data.key} />
