@@ -8,7 +8,7 @@ It was created to compare the usability of different libraries for the same task
 
 Implement a kanban board where user cards are separated by status. Cards can be dragged and dropped between statuses, but not re-sorted within a single status.
 
-When a card is grabbed, the statuses to which it can be dragged should be highlighted. If the card has been dragged to a status to which migration is allowed, a confirmation modal window should be displayed. If the status is not allowed, then nothing is displayed and the card is returned to its original position.
+When a card is grabbed, the statuses to which it can be dragged should be highlighted. If the card has been dragged to a status to which migration is allowed, a confirmation modal window should be displayed. If the status is not allowed, then nothing is displayed and the card is returned to its original position. After closing the modal window we don't have to move the card, we expect the backend to do it.
 
 ### Available transitions
 
