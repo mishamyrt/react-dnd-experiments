@@ -1,4 +1,4 @@
-import { type FC, useCallback, useState } from 'react'
+import { type FC, useCallback, useEffect, useState } from 'react'
 
 import { useBoolean } from '@ozen-ui/kit/useBoolean'
 
@@ -34,6 +34,10 @@ export const LibraryPlayground: FC<LibraryPlaygroundProps> = ({
     },
     [],
   )
+
+  useEffect(() => {
+    document.title = name
+  }, [name])
 
   const ExampleComponent = example
 
