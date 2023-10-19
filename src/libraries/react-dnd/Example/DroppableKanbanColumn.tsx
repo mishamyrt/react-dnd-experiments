@@ -4,6 +4,7 @@ import {
   type KanbanCardStatus,
   type KanbanCardData,
   type KanbanColumnData,
+  canDrop as canDropCard,
 } from '$mock'
 import { useDrop } from 'react-dnd'
 import { DraggableKanbanCard } from './DraggableKanbanCard'
@@ -41,18 +42,7 @@ export const DroppableKanbanColumn: FC<DroppableKanbanColumnProps> = ({
       if (item.status === title) {
         return false
       }
-      switch (title) {
-        case 'New':
-          return item.status === 'Potential'
-        case 'Potential':
-          return ['New', 'Canceled'].includes(item.status)
-        case 'Active':
-          return ['Potential', 'New'].includes(item.status)
-        case 'Canceled':
-          return item.status === 'Active'
-        default:
-          return false
-      }
+      return canDropCard(item, title)
     },
   })
   const isDragging = useIsDragging()
