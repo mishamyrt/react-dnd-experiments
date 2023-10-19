@@ -1,12 +1,15 @@
-import { KanbanColumn, KanbanColumnItems } from '$components'
 import { type FC } from 'react'
+
 import { Droppable } from 'react-beautiful-dnd'
+
+import { KanbanColumn, KanbanColumnItems } from '$components'
 import {
   canDrop,
   type KanbanCardData,
   type KanbanCardStatus,
   type KanbanColumnData,
 } from '$mock'
+
 import { DraggableKanbanCard } from './DraggableKanbanCard'
 
 type DroppableKanbanColumnProps = {

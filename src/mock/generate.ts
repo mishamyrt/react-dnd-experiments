@@ -1,6 +1,7 @@
 import { randomItem, randomString } from '$utils'
+
 import { names } from './constants'
-import type { KanbanCardStatus, KanbanCardData } from './types'
+import type { KanbanCardData, KanbanCardStatus } from './types'
 
 const randomPhone = (): string => randomString('0123456789', 10)
 const randomName = (): string => randomItem(names)

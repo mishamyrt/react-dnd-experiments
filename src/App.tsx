@@ -1,11 +1,14 @@
 import { type FC } from 'react'
-import { ThemeProvider, themeOzenDark } from '@ozen-ui/kit/ThemeProvider'
-import styles from './App.module.scss'
+
+import { themeOzenDark, ThemeProvider } from '@ozen-ui/kit/ThemeProvider'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { LibrariesList } from './pages/LibrariesList'
+
 import { libraries } from './libraries'
+import { LibrariesList } from './pages/LibrariesList'
 import { LibraryPlayground } from './pages/LibraryPlayground'
+
+import styles from './App.module.scss'
 
 const router = createBrowserRouter(
   [

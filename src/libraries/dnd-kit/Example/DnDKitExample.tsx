@@ -1,19 +1,22 @@
-import { useState, type FC, useCallback } from 'react'
+import { type FC, useCallback, useState } from 'react'
+
 import {
   DndContext,
-  DragOverlay,
   type DragEndEvent,
+  DragOverlay,
   type DragStartEvent,
 } from '@dnd-kit/core'
-import { type ExampleProps } from '../../types'
-import {
-  type KanbanCardData,
-  boardData,
-  type KanbanCardStatus,
-  canDrop,
-} from '$mock'
-import { DroppableKanbanColumn } from './DroppableKanbanColumn'
+
 import { KanbanBoard, KanbanCard } from '$components'
+import {
+  boardData,
+  canDrop,
+  type KanbanCardData,
+  type KanbanCardStatus,
+} from '$mock'
+
+import { type ExampleProps } from '../../types'
+import { DroppableKanbanColumn } from './DroppableKanbanColumn'
 
 export const DNDKitExample: FC<ExampleProps> = ({ onChange }) => {
   const [dragged, setDragged] = useState<KanbanCardData | undefined>(undefined)

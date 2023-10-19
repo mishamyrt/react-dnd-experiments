@@ -1,4 +1,5 @@
 import type { FC } from 'react'
+
 import type { KanbanCardData, KanbanCardStatus } from '$mock'
 
 export interface ExampleProps {

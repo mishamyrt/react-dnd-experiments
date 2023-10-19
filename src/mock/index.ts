@@ -1,4 +1,5 @@
 import { randomInt } from '$utils'
+
 import { CardDataGenerator } from './generate'
 import { type KanbanBoardData } from './types'
 export * from './types'

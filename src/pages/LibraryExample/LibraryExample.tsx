@@ -1,8 +1,10 @@
-import type { FC, PropsWithChildren } from 'react'
-import { Typography } from '@ozen-ui/kit/Typography'
-import styles from './LibraryExample.module.scss'
 import { Link } from '@ozen-ui/kit/Link'
 import { Stack } from '@ozen-ui/kit/Stack'
+import { Typography } from '@ozen-ui/kit/Typography'
+
+import type { FC, PropsWithChildren } from 'react'
+
+import styles from './LibraryExample.module.scss'
 
 export type LibraryExampleProps = PropsWithChildren<{
   title: string

@@ -1,14 +1,14 @@
-import type { FC } from 'react'
-
-import { Stack } from '@ozen-ui/kit/Stack'
 import { Card } from '@ozen-ui/kit/Card'
+import { Link } from '@ozen-ui/kit/Link'
+import { Stack } from '@ozen-ui/kit/Stack'
+import { Typography } from '@ozen-ui/kit/Typography'
+
+import type { FC } from 'react'
+import { Link as RouterLink } from 'react-router-dom'
 
 import { libraries } from '../../libraries'
 
 import styles from './LibrariesList.module.scss'
-import { Link as RouterLink } from 'react-router-dom'
-import { Link } from '@ozen-ui/kit/Link'
-import { Typography } from '@ozen-ui/kit/Typography'
 
 const repoLink: string = import.meta.env.VITE_REPO_URL
 

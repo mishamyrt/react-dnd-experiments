@@ -1,8 +1,10 @@
-import { KanbanCard } from '$components'
-import { type KanbanCardData } from '$mock'
 import { type FC } from 'react'
+
 import { useDraggable } from '@dnd-kit/core'
 import clsx from 'clsx'
+
+import { KanbanCard } from '$components'
+import { type KanbanCardData } from '$mock'
 
 import styles from './DraggableKanbanCard.module.scss'
 

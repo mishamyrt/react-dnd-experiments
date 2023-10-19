@@ -1,8 +1,8 @@
-import type { FC } from 'react'
-
 import { Card } from '@ozen-ui/kit/Card'
 import { Stack } from '@ozen-ui/kit/Stack'
 import { Typography } from '@ozen-ui/kit/Typography'
+
+import type { FC } from 'react'
 
 import styles from './KanbanCard.module.scss'
 

@@ -1,7 +1,10 @@
+import { type FC } from 'react'
+
+import { useDrag } from 'react-dnd'
+
 import { KanbanCard } from '$components'
 import { type KanbanCardData } from '$mock'
-import { type FC } from 'react'
-import { useDrag } from 'react-dnd'
+
 import { CardType } from './constants'
 
 export interface DraggableKanbanCardProps {

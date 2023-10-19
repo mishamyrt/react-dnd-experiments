@@ -1,14 +1,17 @@
-import { KanbanColumn, KanbanColumnItems } from '$components'
 import { type FC } from 'react'
-import {
-  type KanbanCardStatus,
-  type KanbanCardData,
-  type KanbanColumnData,
-  canDrop as canDropCard,
-} from '$mock'
+
 import { useDrop } from 'react-dnd'
-import { DraggableKanbanCard } from './DraggableKanbanCard'
+
+import { KanbanColumn, KanbanColumnItems } from '$components'
+import {
+  canDrop as canDropCard,
+  type KanbanCardData,
+  type KanbanCardStatus,
+  type KanbanColumnData,
+} from '$mock'
+
 import { CardType } from './constants'
+import { DraggableKanbanCard } from './DraggableKanbanCard'
 import { useIsDragging } from './hooks'
 
 interface DroppableKanbanColumnProps {

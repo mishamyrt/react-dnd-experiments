@@ -1,6 +1,6 @@
-import type { FC, PropsWithChildren } from 'react'
-
 import { Stack } from '@ozen-ui/kit/Stack'
+
+import type { FC, PropsWithChildren } from 'react'
 
 export type KanbanColumnItemsProps = PropsWithChildren<{
   containerRef?: any

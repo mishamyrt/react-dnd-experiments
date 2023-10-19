@@ -1,3 +1,6 @@
+import { type FC } from 'react'
+
+import { Button } from '@ozen-ui/kit/Button'
 import {
   Dialog,
   DialogBody,
@@ -5,9 +8,8 @@ import {
   DialogHeader,
   DialogTitle,
 } from '@ozen-ui/kit/Dialog'
-import { Button } from '@ozen-ui/kit/Button'
-import { type FC } from 'react'
 import { Stack } from '@ozen-ui/kit/Stack'
+
 import { type KanbanCardData } from '../../mock/types'
 
 export interface ConfirmationDialogProps {

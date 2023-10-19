@@ -1,7 +1,10 @@
+import { type FC } from 'react'
+
+import { useDroppable } from '@dnd-kit/core'
+
 import { KanbanColumn, KanbanColumnItems } from '$components'
 import { canDrop, type KanbanCardData, type KanbanColumnData } from '$mock'
-import { useDroppable } from '@dnd-kit/core'
-import { type FC } from 'react'
+
 import { DraggableKanbanCard } from './DraggableKanbanCard'
 
 interface DroppableKanbanColumnProps {

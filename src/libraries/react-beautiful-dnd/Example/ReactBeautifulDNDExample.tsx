@@ -1,19 +1,22 @@
-import { useCallback, type FC, useState } from 'react'
-import { KanbanBoard } from '$components'
+import { type FC, useCallback, useState } from 'react'
+
 import {
   DragDropContext,
-  type OnDragStartResponder,
   type OnDragEndResponder,
+  type OnDragStartResponder,
 } from 'react-beautiful-dnd'
+
+import { KanbanBoard } from '$components'
 import {
-  type KanbanCardData,
   boardData,
   boardDataMap,
-  type KanbanCardStatus,
   canDrop,
+  type KanbanCardData,
+  type KanbanCardStatus,
 } from '$mock'
-import { DroppableKanbanColumn } from './DroppableKanbanColumn'
+
 import { type ExampleProps } from '../../types'
+import { DroppableKanbanColumn } from './DroppableKanbanColumn'
 
 export const ReactBeautifulDNDExample: FC<ExampleProps> = ({ onChange }) => {
   const [draggedItem, setDraggedItem] = useState<KanbanCardData | undefined>()

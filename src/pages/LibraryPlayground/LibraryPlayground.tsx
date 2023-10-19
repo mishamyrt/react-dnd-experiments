@@ -1,9 +1,12 @@
-import { useState, type FC, useCallback } from 'react'
-import { LibraryExample } from '../LibraryExample'
-import type { ExampleProps } from '../../libraries/types'
-import { ConfirmationDialog } from '$components'
-import { boardData, type KanbanCardStatus, type KanbanCardData } from '$mock'
+import { type FC, useCallback, useState } from 'react'
+
 import { useBoolean } from '@ozen-ui/kit/useBoolean'
+
+import { ConfirmationDialog } from '$components'
+import { boardData, type KanbanCardData, type KanbanCardStatus } from '$mock'
+
+import type { ExampleProps } from '../../libraries/types'
+import { LibraryExample } from '../LibraryExample'
 
 interface LibraryPlaygroundProps {
   name: string

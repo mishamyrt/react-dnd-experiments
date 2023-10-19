@@ -1,9 +1,9 @@
-import type { FC, PropsWithChildren } from 'react'
-
 import { Typography } from '@ozen-ui/kit/Typography'
 
-import styles from './KanbanColumn.module.scss'
 import clsx from 'clsx'
+import type { FC, PropsWithChildren } from 'react'
+
+import styles from './KanbanColumn.module.scss'
 
 export type KanbanColumnProps = PropsWithChildren<{
   title: string

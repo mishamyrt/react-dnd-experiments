@@ -1,12 +1,14 @@
 import { type CSSProperties, type FC } from 'react'
+
 import {
   Draggable,
   type DraggableStateSnapshot,
   type DraggingStyle,
   type NotDraggingStyle,
 } from 'react-beautiful-dnd'
+
 import { KanbanCard } from '$components'
-import { type KanbanCardData } from '../../../mock/types'
+import { type KanbanCardData } from '$mock'
 
 export interface DraggableKanbanCardProps {
   data: KanbanCardData
