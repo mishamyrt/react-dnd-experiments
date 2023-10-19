@@ -29,7 +29,8 @@ export const ConfirmationDialog: FC<ConfirmationDialogProps> = ({
         <DialogTitle>Are you sure?</DialogTitle>
       </DialogHeader>
       <DialogBody>
-        You really want to change the status of user <b>{data.name}</b> to <b>{target}</b>?
+        You really want to change the status of user <b>{data.name}</b> to{' '}
+        <b>{target}</b>?
       </DialogBody>
       <DialogFooter>
         <Stack gap="s">

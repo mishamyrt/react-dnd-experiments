@@ -17,15 +17,23 @@ const formatBundlephobiaUrl = (packageName: string): string => {
   return `https://bundlephobia.com/package/${packageName}`
 }
 
-export const LibraryExample: FC<LibraryExampleProps> = ({ children, title, directory }) => {
+export const LibraryExample: FC<LibraryExampleProps> = ({
+  children,
+  title,
+  directory,
+}) => {
   return (
     <div className={styles.example}>
-      <Stack align='center' direction="row" gap="xl">
+      <Stack align="center" direction="row" gap="xl">
         <Typography color="tertiary" variant="heading-3xl">
           {title}
         </Typography>
-        <Link variant='text-s' href={formatBundlephobiaUrl(title)} target='_blank'>Bundlephobia</Link>
-        <Link variant='text-s' href={formatExampleUrl(directory)} target='_blank'>Example code</Link>
+        <Link variant="text-s" href={formatBundlephobiaUrl(title)} target="_blank">
+          Bundlephobia
+        </Link>
+        <Link variant="text-s" href={formatExampleUrl(directory)} target="_blank">
+          Example code
+        </Link>
       </Stack>
       <div className={styles.content}>{children}</div>
     </div>

@@ -7,15 +7,22 @@ import { KanbanBoard } from '$components'
 import { type ExampleProps } from '../../types'
 
 export const ReactDNDExample: FC<ExampleProps> = ({ onChange }) => {
-  const handleSelectItem = useCallback((data: KanbanCardData, target: KanbanCardStatus) => {
-    onChange(data, target)
-  }, [])
+  const handleSelectItem = useCallback(
+    (data: KanbanCardData, target: KanbanCardStatus) => {
+      onChange(data, target)
+    },
+    [],
+  )
 
   return (
     <DndProvider backend={HTML5Backend}>
       <KanbanBoard>
         {boardData.map((data) => (
-          <DroppableKanbanColumn key={data.title} onSelect={handleSelectItem} data={data} />
+          <DroppableKanbanColumn
+            key={data.title}
+            onSelect={handleSelectItem}
+            data={data}
+          />
         ))}
       </KanbanBoard>
     </DndProvider>

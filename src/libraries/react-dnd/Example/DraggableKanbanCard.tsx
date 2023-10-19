@@ -9,9 +9,7 @@ export interface DraggableKanbanCardProps {
   index: number
 }
 
-export const DraggableKanbanCard: FC<DraggableKanbanCardProps> = ({
-  data,
-}) => {
+export const DraggableKanbanCard: FC<DraggableKanbanCardProps> = ({ data }) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [_, dragRef] = useDrag<KanbanCardData, KanbanCardData>(
     () => ({

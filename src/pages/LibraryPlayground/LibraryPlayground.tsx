@@ -11,18 +11,26 @@ interface LibraryPlaygroundProps {
   example: FC<ExampleProps> | undefined
 }
 
-export const LibraryPlayground: FC<LibraryPlaygroundProps> = ({ name, directory, example }) => {
+export const LibraryPlayground: FC<LibraryPlaygroundProps> = ({
+  name,
+  directory,
+  example,
+}) => {
   const [selected, setSelected] = useState({
     data: boardData[0].items[0],
     target: boardData[0].title,
   })
   const [open, { off, on }] = useBoolean(false)
-  const handleSelectItem = useCallback((data: KanbanCardData, target: KanbanCardStatus) => {
-    setSelected({
-      data, target,
-    })
-    on()
-  }, [])
+  const handleSelectItem = useCallback(
+    (data: KanbanCardData, target: KanbanCardStatus) => {
+      setSelected({
+        data,
+        target,
+      })
+      on()
+    },
+    [],
+  )
 
   const ExampleComponent = example
 

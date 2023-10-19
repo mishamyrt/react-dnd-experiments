@@ -12,10 +12,10 @@ When a card is grabbed, the statuses to which it can be dragged should be highli
 
 ### Available transitions
 
-* New → Potential, Active
-* Potential → New, Active
-* Active → Canceled
-* Canceled → Potential
+- New → Potential, Active
+- Potential → New, Active
+- Active → Canceled
+- Canceled → Potential
 
 ## Libraries
 

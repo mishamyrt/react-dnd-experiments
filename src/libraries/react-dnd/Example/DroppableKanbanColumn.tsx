@@ -1,6 +1,10 @@
 import { KanbanColumn, KanbanColumnItems } from '$components'
 import { type FC } from 'react'
-import { type KanbanCardStatus, type KanbanCardData, type KanbanColumnData } from '$mock'
+import {
+  type KanbanCardStatus,
+  type KanbanCardData,
+  type KanbanColumnData,
+} from '$mock'
 import { useDrop } from 'react-dnd'
 import { DraggableKanbanCard } from './DraggableKanbanCard'
 import { CardType } from './constants'
@@ -10,12 +14,19 @@ interface DroppableKanbanColumnProps {
   onSelect: (data: KanbanCardData, target: KanbanCardStatus) => void
 }
 
-export const DroppableKanbanColumn: FC<DroppableKanbanColumnProps> = ({ data, onSelect }) => {
+export const DroppableKanbanColumn: FC<DroppableKanbanColumnProps> = ({
+  data,
+  onSelect,
+}) => {
   const { title, items } = data
-  const [{ isOver, canDrop }, dropRef] = useDrop<KanbanCardData, KanbanCardData, {
+  const [{ isOver, canDrop }, dropRef] = useDrop<
+  KanbanCardData,
+  KanbanCardData,
+  {
     isOver: boolean
     canDrop: boolean
-  }>({
+  }
+  >({
     accept: CardType,
     drop: (item) => {
       onSelect(item, title)
